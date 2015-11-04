@@ -17,7 +17,7 @@ apiURL = 'http://api.wunderground.com/api/' + API_KEY + '/geolookup/conditions/q
 # JSON Parser
 with urllib.request.urlopen(apiURL) as url:
     response = url.read()
-charset = url.info(). get_content_charset('utf-8')  # UTF-8 is the JSON defaultjson_string = f.json
+charset = url.info(). get_content_charset('utf-8')  # UTF-8 Encode
 json_string = json.loads(response.decode(charset))
 parsed_json = json_string
 
