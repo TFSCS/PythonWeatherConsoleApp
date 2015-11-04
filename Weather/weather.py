@@ -8,7 +8,12 @@ print ("\n\n\n\n")
   
 
 zip = (input("Enter Your Zip Code: "))
-apiURL = 'http://api.wunderground.com/api/API_KEY/geolookup/conditions/q/' + zip + '.json'
+
+API_KEY = open('API_KEY.txt', encoding="utf-8").read()
+
+apiURL = 'http://api.wunderground.com/api/' + API_KEY + '/geolookup/conditions/q/' + zip + '.json'
+
+
 # JSON Parser
 with urllib.request.urlopen(apiURL) as url:
     response = url.read()
