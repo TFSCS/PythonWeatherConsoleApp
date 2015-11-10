@@ -42,7 +42,7 @@ weather = str(parsed_json['current_observation']['weather'])
 wTemp = str(parsed_json['current_observation']['temperature_string'])
 wFeelsLikeTemp = str(parsed_json['current_observation']['feelslike_string'])
 wRelativeHumidity = str(parsed_json['current_observation']['relative_humidity'])
-wPressure = str(parsed_json['current_observation']['relative_humidity'])
+wPressure = str(parsed_json['current_observation']['pressure_in'])
 
 # Output
 printHeader()
